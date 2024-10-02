@@ -1,1 +1,2 @@
-v
+var ourArray = ["Stimpson", "J", ["cat"]];
+var removedFromOurArray = ourArray.shift(); //
