@@ -41,6 +41,7 @@ function reusableFunction() {
 }
 reusableFunction(); //Should see "Heyya, World" and "Hi World"
 
+//Passing Values to Functions with Arguments
 
 
 
