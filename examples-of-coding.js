@@ -78,13 +78,111 @@ fun2();
 
 //Local Scope and Function
   //Variables which are declared within a function as well as the function parameters have local scope; meaning that they are only visible within the function. 
+//Example 1 
 function myLocalScope() { 
-  var myVar = //if we declare variable here 
+  var myVar = 5;//if we declare variable here is only visible inside the function
   console.log(myVar);
 }
 myLocalScope();
-console.log(myVar); 
+console.log(myVar); //outside for the function so it will cause an error; therefore this line of code will be deleted
 
+//Global vs. Local Scope in Functions 
+  //Possible to have both with the same name; but the local variable will have precedent over the global variable
+//Example 1 
+var outWear = "T-Shirt"; //Global Variable declared outside of the function
+function myOutfit() { //this function will return "outWear"
+  return outerWear; 
+}
+console.log(myOutfit()); //console returns "T-Shirt"
+
+//Example 2 
+var outWear = "T-Shirt"; 
+
+function myOutfit() { 
+  var outWear = "sweater";
+  return outerWear; 
+}
+console.log(myOutfit()); //Console returns "Sweater" 
+console.log(outerWear); //Console returns "T-shirt"
+
+//Return a Value from a Function with Return 
+  //Example 1 
+function minusSeven(num) {
+  return num - 7; 
+}
+
+console.log (minusSeven(10)); //Console return is "3"
+
+  //Example 2
+function timesFive(num) {
+  return num * 5; 
+}
+
+console.log(timesFive(5)); 
+
+//Understaning Undefined Value Returned from a Function 
+  //Example 1 
+var sum = 0;
+function addThree() { 
+  sum = sum + 3; //Return statements are not always there; and will return undefined 
+}
+
+ //Example 2
+var sum = 0;
+function addFive() {
+  sum += 5; //Return is still "undefined"; missing "return" statement 
+}
+
+//Assignement with a Returned Value 
+  //Example 1 
+var changed = 0; 
+
+function change(num) { //Pass in a number and it returns this mathematical expression
+  return (num + 5) / 3; 
+}
+
+changed = change(10); 
+
+var processed = 0;
+
+function processArg(num) { 
+  return (num + 3) / 5; 
+}
+ processed = processArg(7); 
+
+//Stand in Line
+    //Cue: is an abstract data structure where items are kept in order
+  //Example 1 
+function nextInLine(arr, item) { //This can add an item to the array that's passed in then return the first item on the list 
+  //Your Code here 
+  arr.push(item);
+  return arr.shift(); //Shift moves the first item and returns the first item
+
+}
+var testArr = [1, 2, 3, 4, 5]; //Array
+
+console.log("Before: " + JSON.stringify(testArr)); //JSON.stringify is a way to change the array in to a string for easy view
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr)); 
+
+//Console return is:
+//"Before: [1, 2, 3, 4, 5]
+// 1
+//After [ 2, 3, 4, 5, 6]
+
+//Boolean Values 
+    //Boolean: datatype in javascript; only two values: True or False
+      //They are on/off switches; true = ON & false = OFF
+//Example 1
+function welcomeToBooleans() {
+  return false; 
+}
+//Example 2 
+function welcomeToBooleans() {
+  return true; 
+}
+
+//Use Conditional Logic with If Statements
 
 
 
